@@ -21,11 +21,11 @@ public class Playfair {
 	{
 		int i,j;
 		
-		char ref[] = { 'A','B','C','D','E','F','G','H','I','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+		char ref[] = { 'A','B','C','D','E','F','G','H','I','J','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
 		
 		String keyword = Cryptool.pfKeyword.getText();
-		keyword = keyword.replace('J','I');
-		keyword = keyword.replace('j','i');
+		keyword = keyword.replace('K','C');
+		keyword = keyword.replace('k','c');
 		
 		char letters[] = new char[25];
 		
