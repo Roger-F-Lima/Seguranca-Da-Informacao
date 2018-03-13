@@ -6,7 +6,9 @@ que mais domino, tive um pouco de duvida na parte de descriptografar, mas atrave
 Segui o codigo.
 
 public class Playfair {
+
 	public static void doPfCopy()
+	
 	{
 		char letters[][] = Cryptool.pfMatrix.getLetters();
 		
