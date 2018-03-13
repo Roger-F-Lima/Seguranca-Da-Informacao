@@ -38,7 +38,7 @@ public class Playfair {
 		String newKeyword = new String(letters,0,j);
 		
 		// converte nossa palavra-chave em maiúscula. por exemplo, uma palavra-chave de
-		// mississippi seria MISP.
+		// abacate seria ABCTE.
 		newKeyword = newKeyword.toUpperCase();
 		
 		// preencha os espaços em branco para o resto da matriz 5x5, qualquer caractere que não seja
@@ -72,7 +72,7 @@ public class Playfair {
 		
 		String ciphertext = "";
 		
-		// atravesse o texto simples dois caracteres de cada vez, chamando a função 'decodePf' com a matriz, os dois caracteres e um conjunto booleano para significar verdade que 
+		// atravesse o texto simples dois caracteres de cada vez, chamando a função 'decodePf' com a matriz, os dois caracteres                 //e um conjunto booleano para significar verdade que 
                 //estamos criptografando.
 		for(int i=0;i<plaintext.length();i+=2)
 		{
@@ -105,7 +105,7 @@ public class Playfair {
 		
 		for(int i=0;i<ciphertext.length();i+=2)
 		{
-			// chamar decodePf com a matriz, as letras e falsas que significam que queremos descriptografar (as regras são usadas no sentido inverso)
+			// chamar decodePf com a matriz, as letras e falsas que significam que queremos descriptografar (as regras são                           //usadas no sentido inverso)
 			plaintext = plaintext.concat(decodePf(letters, ciphertext.charAt(i), ciphertext.charAt(i+1), false));
 		}
 		
@@ -114,7 +114,7 @@ public class Playfair {
 	}
 	
 	// A seguinte função converte o texto claro para cumprir as regras do Playfair.
-	// Por exemplo, a letra j é removida e substituída por i, e um modelo caractere
+	// Por exemplo, a letra K é removida e substituída por C, e um modelo caractere
 	// é colocado entre letras duplas. finalmente, se o número de caracteres de texto claro
 	// é estranho, adicione um modelo caractere ao final para torná-lo igual.
 	public static String ppPfPlainText(String plaintext)
@@ -123,14 +123,14 @@ public class Playfair {
 		
 		for(int i=0;i<plaintext.length();++i)
 		{
-			// se char for j, adicione i ao novo texto sem formatação
-			if(plaintext.charAt(i) == 'j')
-				newPlaintext = newPlaintext.concat("i");
-			// else se o char atual for igual ao próximo caractere, então adicione um q entre os dois.
+			// se char for K, adicione C ao novo texto sem formatação
+			if(plaintext.charAt(i) == 'k')
+				newPlaintext = newPlaintext.concat("c");
+			// se não se o char atual for igual ao próximo caractere, então adicione um x entre os dois.
 			else if((i != (plaintext.length()-1)) && plaintext.charAt(i) == plaintext.charAt(i+1))
 			{
 				String conversion = String.valueOf(plaintext.charAt(i));
-				conversion = conversion.concat("q");
+				conversion = conversion.concat("x");
 				
 				newPlaintext = newPlaintext.concat(conversion);
 			}
