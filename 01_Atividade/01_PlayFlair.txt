@@ -1,0 +1,214 @@
+classe pública Playfair {
+
+public static void doPfCopy ()
+
+{
+	char letras [] [] = Cryptool.pfMatrix.getLetters ();
+	
+	para (int i = 0; i <25; ++ i)
+		Cryptool.pfCustMatrix [i] .setText (String.valueOf (letras [i / 5] [i% 5]));
+}
+
+// A seguir a função gera uma matriz 5x5, dada uma palavra-chave do usuário.
+public static void doPfGenerate ()
+{
+	int i, j;
+	
+	char ref [] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'eu', 'J', 'L', M, N, O, P, Q, R, S, T, U, V, W, X, Y ',' Z '};
+	
+	String palavra-chave = Cryptool.pfKeyword.getText ();
+	palavra-chave = keyword.replace ('K', 'C');
+	palavra-chave = keyword.replace ('k', 'c');
+	
+	letras de char [] = novo char [25];
+	
+	// comece a todos os caracteres na matriz 5x5.
+	// Verifique se o facto está em isolamento, se ainda não foi adicionado.
+	para (i = 0, j = 0; i <keyword.length (); ++ i)
+		if (String.valueOf (letras) .indexOf (keyword.charAt (i)) == -1)
+			letras [j ++] = keyword.charAt (i);
+	
+	String newKeyword = new String (letras, 0, j);
+	
+	// converte nossa palavra-chave em maiúscula. por exemplo, uma palavra-chave de
+	// abacate seria ABCTE.
+	newKeyword = newKeyword.toUpperCase ();
+	
+	// preencha os espaços em branco para o resto da matriz 5x5, qualquer caractere que não seja
+	// na senha.
+	para (i = 0; i <25; ++ i)
+	{
+		if (newKeyword.indexOf (ref [i] == -1)
+		{
+			letras [j ++] = ref [i];
+		}
+	}
+	
+	String strLetters = new String (letras);
+	
+	strLetters = strLetters.toUpperCase ();
+	
+	// configura as letras da aula Matriz que escreve (que desenha uma matriz 5x5)
+	Cryptool.pfMatrix.setLetters (strLetters.toCharArray ());
+}
+
+A seguinte é uma criptografia de texto simples para texto cifrado utilizando playfair.
+public static void doPfEncrypt ()
+{
+	String plaintext = Cryptool.pfPlainText.getText ();
+	
+	// envia texto sem formatação para cumprir como regras playfair
+	texto simples = ppPfPlainText (texto sem formatação);
+	
+	// conversor para maiúsculas
+	texto simples = plaintext.toUpperCase ();
+	
+	String ciphertext = "";
+	
+	// texto com duas frases de cada vez, chamando uma função 'decodePf' com uma matriz, os dois caracteres // e um conjunto booleano para significar verdade que 
+            // estamos criptografando.
+	para (int i = 0; i <plaintext.length (); i + = 2)
+	{
+		ciphertext = ciphertext.concat (decodePf (Cryptool.pfMatrix.getLetters (), texto simples.charAt (i), plaintext.charAt (i + 1), true));
+	}
+	
+	// configure o texto criptografado para a tela para que o usuário possa ver.
+	Cryptool.pfCipherText.setText (texto cifrado);
+}
+
+public static void doPfDecrypt ()
+{
+	String ciphertext = Cryptool.custCipherText.getText ();
+	
+	ciphertext = ciphertext.toUpperCase ();
+	
+	String plaintext = "";
+	
+	char letras [] [] = novo char [5] [5];
+	
+	para (int i = 0; i <25; ++ i)
+	{
+		Ao decodificar, verifique uma matriz personalizada. está uma letra estiver vazia, adicionar um traço para
+		// uma matriz 5x5, para que uma função de descrição seja usada.
+		if (Cryptool.pfCustMatrix [i] .getText (). é igual a (""))
+			letras [i / 5] [i% 5] = '-';
+		outro
+			letras [i / 5] [i% 5] = Cryptool.pfCustMatrix [i] .getText (). charAt (0);
+	}		
+	
+	para (int i = 0; i <ciphertext.length (); i + = 2)
+	{
+		// chamar decodePf com uma matriz, como letras e falsas que significam que se descriptografar (as regras são // usadas no sentido inverso)
+		texto simples = plaintext.concat (decodePf (letras, texto cifrado.charAt (i), ciphertext.charAt (i + 1), falso));
+	}
+	
+	// configure o texto plano para que o usuário possa ver.
+	Cryptool.custPlainText.setText (texto sem formatação);		
+}
+
+// A seguinte função é convertida em texto claro para cumprir as regras da Playfair.
+// Por exemplo, a letra K é removida e substituída por C, e um modelo caractere
+// é encontrado entre as letras duplas. finalmente, o número de caracteres de texto claro
+// é estranho, compare um caractere ao final para tornar-lo igual.
+public static String ppPfPlainText (String texto sem formatação)
+{
+	String newPlaintext = "";
+	
+	para (int i = 0; i <plaintext.length (); ++ i)
+	{
+		// se char para K, adicione C ao novo texto sem formatação
+		if (plaintext.charAt (i) == 'k')
+			newPlaintext = newPlaintext.concat ("c");
+		// se não se o char atual para igual ao próximo caractere, então adicione um entre os dois.
+		else if ((i! = (plaintext.length () - 1)) && plaintext.charAt (i) == texto sem formatação.charAt (i + 1))
+		{
+			String conversion = String.valueOf (plaintext.charAt (i));
+			conversão = conversion.concat ("x");
+			
+			newPlaintext = newPlaintext.concat (conversão);
+		}
+		// adicionar o caractere ao novo texto simples como sempre
+		outro
+			newPlaintext = newPlaintext.concat (String.valueOf (plaintext.charAt (i)));			
+	}
+	
+	// add o modelo de caractere é comprimento é estranho
+	if (newPlaintext.length ()% 2! = 0)
+		newPlaintext = newPlaintext.concat (String.valueOf ("x"));
+	
+	return newPlaintext;
+}
+
+
+// A seguinte format for decoding and codified (funciona de ambos os lados)
+// string dada uma matriz 5x5.
+public static String decodePf (char [] [] matriz, char a, char b, booleano criptografar)
+{
+	int row_a = -1, row_b = -1, col_a = -1, col_b = -1;
+	int row_c, row_d, col_c, col_d;
+	
+	char result [] = novo char [2];
+	
+	// Ver as posições dos caracteres A e B.
+	para (int i = 0; i <5; ++ i)
+	{
+		para (int j = 0; j <5; ++ j)
+		{
+			if (matriz [i] [j] == a)
+			{
+				row_a = i;
+				col_a = j;
+			}
+			
+			if (matriz [i] [j] == b)
+			{
+				row_b = i;
+				col_b = j;
+			}
+		}
+	}
+	
+	// Se um dos caracteres não pode ser encontrado (se tivermos uma matriz incompleta), devolvemos 
+	// para notar que não é possível encontrar o par correspondente de letras.
+	if ((row_a == -1 && col_a == -1) ||
+	   (row_b == -1 && col_b == -1))
+	{
+		resultado [0] = '-';
+		resultado [1] = '-';
+	}
+	outro
+	{
+		// as os caracteres na mesma linha, veja os dois caracteres à direita de cada (se formulário criptografando)
+		ou à esquerda de cada (desencripta)
+		if (row_a == row_b)
+		{
+			row_c = row_a;
+			col_c = (encriptar? (col_a + 1)% 5: (col_a == 0? 4: (col_a-1)));
+			row_d = row_b;
+			col_d = (encriptar? (col_b + 1)% 5: (col_b == 0? 4: (col_b-1)));
+		}
+		// se as seqüências de caracteres na mesma coluna, selecione os dois caracteres abaixo se estiver criptografando
+		// ou acima se desencriptar
+		else if (col_a == col_b)
+		{
+			row_c = (criptografar? (linha_a + 1)% 5: (linha_a == 0? 4: (linha_a-1)));
+			col_c = col_a;
+			row_d = (criptografar? (row_b + 1)% 5: (row_b == 0? 4: (row_b-1)));
+			col_d = col_b;
+		}
+		as duas bandas estão em linhas e pressas, então crie um quadrado usando os dois pontos,
+		// e selecione os dois caracteres que criam os outros pontos.
+		outro
+		{
+			row_c = row_a;
+			col_c = col_b;
+			row_d = row_b;
+			col_d = col_a;
+		}
+		
+		resultado [0] = matriz [linha_c] [col_c];
+		resultado [1] = matriz [linha_d] [col_d];
+	}
+	
+	return new String (resultado);
+}
