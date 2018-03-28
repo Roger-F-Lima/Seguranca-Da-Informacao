@@ -5,6 +5,7 @@ Esse método de criptografia foi descrito originalmente pelo criptologista itali
 ver mais
 
 Equipe
+
 Antonio Carlos
 Jefté Souza
 Roger Ferreira
