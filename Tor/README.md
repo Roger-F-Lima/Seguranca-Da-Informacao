@@ -1,2 +1,53 @@
 ## Protocolo Tor <br>
-Tor (anteriormente um acrônimo para The Onion Router) [2] é um software livre e de código aberto que proporciona o anonimato pessoal ao navegar na Internet e em atividades online, protegendo contra a censura e principalmente a privacidade pessoal. A maioria das distribuições GNU/Linux disponibilizam o Tor, embora haja versões para diferentes sistemas operacionais, tais como Windows e Mac OS. A rede Tor é uma rede de túneis http (com tls) sobrejacente à Internet, onde os roteadores da rede são computadores de usuários comuns rodando um programa e com acesso web (apenas). O objetivo principal do projeto é garantir o anonimato, e consequentemente privacidade, ao usuário que está acessando a web. <br>[ver mais]
+
+Tor (anteriormente um acrônimo para The Onion Router) [2] é um software livre e de código aberto que proporciona o anonimato pessoal ao navegar na Internet e em atividades online, protegendo contra a censura e principalmente a privacidade pessoal. A maioria das distribuições GNU/Linux disponibilizam o Tor, embora haja versões para diferentes sistemas operacionais, tais como Windows e Mac OS. A rede Tor é uma rede de túneis http (com tls) sobrejacente à Internet, onde os roteadores da rede são computadores de usuários comuns rodando um programa e com acesso web (apenas). O objetivo principal do projeto é garantir o anonimato, e consequentemente privacidade, ao usuário que está acessando a web. <br>[ver mais](https://pt.wikipedia.org/wiki/Tor_(rede_de_anonimato))
+
+##Dupla
+
+[Jefté de Sousa](https://github.com/bassebete/information-security)
+[Róger F. Lima](https://github.com/Roger-F-Lima/Seguranca-Da-Informacao)<br>
+
+## Como vocês dividiram/fizeram a atividade?
+
+Nós nos reunimos para discutir para o que deveriamos falar, então chagamos a comclusão que falariamos uma pouco sobre VPN (Virtual Private
+Network), criptografia, tunelamento, relays, como e porque é importante ficar anônimo.
+
+## O que você aprendeu e o que ainda tem dificuldade?
+
+Nós aprendemos sobre como funciona a rede Tor, semelhanças entre ele e outros protocolos como o Torrent, nossa grande dificuldade foi a
+configuração de Relays, pois a mesma se mostrou bastante bugada.
+
+## Quanto tempo você gastou no total na atividade?
+
+Cerca de quatro horas, decidindo o que iramos falar e reunido tutorias.
+
+## Tutorial de como selecinar o pais pelo qual seu tráfico vai passar.
+
+## TORRC
+A configuração é simples, modifique seu arquivo torrc para adicionar a seguinte linha para garantir que o Tor use apenas os nós de saída baseados na Brasil.
+
+## ExitNodes
+
+As duas linhas a seguir configuram o nosso Tor para que use o Brasil na hora de buasca um Relay. 
+Por favor, note que em todos esses exemplos, devemos habilitar StrictNodes.
+
+ExitNodes {br}
+StrictNodes 1
+
+Este exemplo usará a Brasil, Uganda, Coreia do Sul ou Irlanda eleatório como saída:
+
+ExitNodes {ua},{ug},{kp},{ie}
+
+## Lista Negra
+
+Você também pode usar isso como uma medida defensiva também. Se você acredita que existe algum tipo de ameaça geocêntrica em Estados
+Unidos, você pode configurar o Tor para nunca usar esses nós de saída.
+
+ExcludeExitNodes {us}
+
+Você também pode excluir todos os tipos de nós para um país específico - saídas, retransmissões, entrada e nós de ponte.
+
+ExcludeNodes {us}
+
+Você tem a capacidade de colocar na lista de permissões todos os tipos de nós, o que significa que você pode garantir que todo o seu
+circuito Tor use apenas um determinado país. Isso não é recomendado, é claro. Um circuito ideal cruzará países e jurisdições legais.
