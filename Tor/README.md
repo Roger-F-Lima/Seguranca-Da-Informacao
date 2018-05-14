@@ -36,7 +36,7 @@ StrictNodes 1
 
 Este exemplo usará a Brasil, Uganda, Coreia do Sul ou Irlanda eleatório como saída:
 
-ExitNodes {ua},{ug},{kp},{ie}
+ExitNodes {br},{ug},{kp},{ie}
 
 ## Lista Negra
 
