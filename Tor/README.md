@@ -61,3 +61,9 @@ Observar a medida de tempo inclui os ruídos externos (como latência de rede, d
 
 ## Fontes
 <br>[tecmundo](https://www.tecmundo.com.br/1427-o-que-e-vpn-.htm)
+<br>[ufrj](https://www.gta.ufrj.br/ensino/eel879/trabalhos_vf_2010_2/rodolfo/tor.html)
+<br>[wikipedia](https://pt.wikipedia.org/wiki/Ataque_de_temporiza%C3%A7%C3%A3o)
+<br>[technedigitus](https://www.technedigitus.com/2015/09/configurando-o-tor-para-escolher-quais.html)
+<br>[wikihow](https://pt.wikihow.com/Definir-um-Pa%C3%ADs-Espec%C3%ADfico-no-Navegador-de-Internet-Tor)
+<br>[b3rn3d](http://www.b3rn3d.com/blog/2014/03/05/tor-country-codes/)
+<br>[scottlinux](https://scottlinux.com/2013/04/07/how-to-run-a-tor-relay-on-ubuntu-or-debian/)
