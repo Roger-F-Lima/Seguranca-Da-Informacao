@@ -48,6 +48,16 @@ ExcludeExitNodes {us}
 Você também pode excluir todos os tipos de nós para um país específico - saídas, retransmissões, entrada e nós de ponte.
 
 ExcludeNodes {us}
-
 Você tem a capacidade de colocar na lista de permissões todos os tipos de nós, o que significa que você pode garantir que todo o seu
 circuito Tor use apenas um determinado país. Isso não é recomendado, é claro. Um circuito ideal cruzará países e jurisdições legais.
+
+## VPN e Tunelamento 
+Uma Rede Particular Virtual (Virtual Private Network – VPN), como o próprio nome sugere, é uma forma de conectar dois computadores
+utilizando uma rede pública, como a Internet (a rede pública mais utilizada para este propósito).<br>[ver mais]
+(https://www.tecmundo.com.br/1427-o-que-e-vpn-.htm)
+ 
+## Ataque de Temporização 
+Observar a medida de tempo inclui os ruídos externos (como latência de rede, diferenças de tempo no acesso a disco, etc.). Apesar disso, ataques de temporização são práticos contra diversos algoritmos como: RSA, ElGamal e DSA.
+
+## Fontes
+<br>[tecmundo](https://www.tecmundo.com.br/1427-o-que-e-vpn-.htm)
