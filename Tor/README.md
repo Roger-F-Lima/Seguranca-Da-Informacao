@@ -1,6 +1,6 @@
 ## Protocolo Tor <br>
 
-Tor (anteriormente um acrônimo para The Onion Router) [2] é um software livre e de código aberto que proporciona o anonimato pessoal ao navegar na Internet e em atividades online, protegendo contra a censura e principalmente a privacidade pessoal. A maioria das distribuições GNU/Linux disponibilizam o Tor, embora haja versões para diferentes sistemas operacionais, tais como Windows e Mac OS. A rede Tor é uma rede de túneis http (com tls) sobrejacente à Internet, onde os roteadores da rede são computadores de usuários comuns rodando um programa e com acesso web (apenas). O objetivo principal do projeto é garantir o anonimato, e consequentemente privacidade, ao usuário que está acessando a web. <br>[ver mais](https://pt.wikipedia.org/wiki/Tor_(rede_de_anonimato))
+Tor (anteriormente um acrônimo para The Onion Router) é um software livre e de código aberto que proporciona o anonimato pessoal ao navegar na Internet e em atividades online, protegendo contra a censura e principalmente a privacidade pessoal. A maioria das distribuições GNU/Linux disponibilizam o Tor, embora haja versões para diferentes sistemas operacionais, tais como Windows e Mac OS. A rede Tor é uma rede de túneis http (com tls) sobrejacente à Internet, onde os roteadores da rede são computadores de usuários comuns rodando um programa e com acesso web (apenas). O objetivo principal do projeto é garantir o anonimato, e consequentemente privacidade, ao usuário que está acessando a web. <br>[ver mais](https://pt.wikipedia.org/wiki/Tor_(rede_de_anonimato))
 
 ##Dupla
 
