@@ -59,7 +59,7 @@ utilizando uma rede pública, como a Internet (a rede pública mais utilizada pa
 ## Ataque de Temporização 
 Observar a medida de tempo inclui os ruídos externos (como latência de rede, diferenças de tempo no acesso a disco, etc.). Apesar disso, ataques de temporização são práticos contra diversos algoritmos como: RSA, ElGamal e DSA.
 
-## Fontes
+## Linkes uteis
 <br>[tecmundo](https://www.tecmundo.com.br/1427-o-que-e-vpn-.htm)
 <br>[ufrj](https://www.gta.ufrj.br/ensino/eel879/trabalhos_vf_2010_2/rodolfo/tor.html)
 <br>[wikipedia](https://pt.wikipedia.org/wiki/Ataque_de_temporiza%C3%A7%C3%A3o)
@@ -67,7 +67,7 @@ Observar a medida de tempo inclui os ruídos externos (como latência de rede, d
 <br>[wikihow](https://pt.wikihow.com/Definir-um-Pa%C3%ADs-Espec%C3%ADfico-no-Navegador-de-Internet-Tor)
 <br>[b3rn3d](http://www.b3rn3d.com/blog/2014/03/05/tor-country-codes/)
 <br>[scottlinux](https://scottlinux.com/2013/04/07/how-to-run-a-tor-relay-on-ubuntu-or-debian/)
-
+<br>[Tor Project](https://www.torproject.org/)
 ## Questões
 
 ## 1ª) Instalar o Tor no linux ou windows.
