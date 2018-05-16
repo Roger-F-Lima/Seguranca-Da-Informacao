@@ -67,3 +67,10 @@ Observar a medida de tempo inclui os ruídos externos (como latência de rede, d
 <br>[wikihow](https://pt.wikihow.com/Definir-um-Pa%C3%ADs-Espec%C3%ADfico-no-Navegador-de-Internet-Tor)
 <br>[b3rn3d](http://www.b3rn3d.com/blog/2014/03/05/tor-country-codes/)
 <br>[scottlinux](https://scottlinux.com/2013/04/07/how-to-run-a-tor-relay-on-ubuntu-or-debian/)
+
+## Questões
+
+## 1ª) Instalar o Tor no linux ou windows.
+## 2ª) Configurar uma lista negra de paises pelos quais não ache seguro passar.
+## 3ª) Acessar alguns sites que rastreiam seu ip para testar o anônimato do Tor.
+## 4ª) Acessar algum site da deep web e tirar uns prints da tela do site.
