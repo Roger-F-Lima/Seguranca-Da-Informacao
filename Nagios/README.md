@@ -7,8 +7,12 @@ util para praticar e revisar mais algumas coisas sobre a ferramenta, na questão
 
 ## Prerequisítos
 
-Ubuntu 16.04 (De preferência pois existem mais tutorias para ele, mas é possível usa qualquer distro)
-Nagios instalado
+<ul>
+
+   <li>Ubuntu 16.04 (De preferência pois existem mais tutorias para ele, mas é possível usa qualquer distro)</li>
+   <li>Nagios instalado</li>
+
+</ul>
 
 ## Como Funciona a prática
 
