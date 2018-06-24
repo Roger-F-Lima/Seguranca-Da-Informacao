@@ -8,8 +8,12 @@ apagar as fotos e videos gerados pela prática.
 
 ## Prerrequisítos
 
-Kali Linux (Atacante)
-Metasploit
+<ul>
+
+   <li>Kali Linux (Atacante)</li>
+   <li>Metasploit</li>
+
+</ul>
 
 ## Como funcina a prática
 
