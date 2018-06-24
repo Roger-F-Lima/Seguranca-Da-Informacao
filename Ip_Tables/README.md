@@ -1,8 +1,8 @@
 # IP Tables
 
-Nessa pratica eu usei duas máquinas linux uma para fucinar como firewall e outra como cliente, fiz as configurações de rede necessárias para
-passar a rede da máquina cliente pela máquina firewall e nesta eu testei diverças regras da IP tables para limitar ou liberar o acesso da
-máquina cliente a internet.
+Nessa pratica eu usei duas máquinas linux uma para fucinar como firewall e outra como cliente, fiz as configurações de rede necessárias 
+para passar a rede da máquina cliente pela máquina firewall e nesta eu testei diverças regras da IP tables para limitar ou liberar o 
+acesso da máquina cliente a internet, com relação a aprendizagem eu pude relabrar algumas coisas da disciplina de adm linux que fizemos algo parecido, com relação ao tempo eu levei cerca de 2 horas para terminar.
 
 ## Prerequisítos
 
