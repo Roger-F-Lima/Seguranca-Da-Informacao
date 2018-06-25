@@ -11,7 +11,7 @@ Roger Ferreira
 
 ## O que você sabe fazer do que está sendo apresentado?
 
-Bom como falado na descrição eu pesquisei na internet fiz, todas as funções, porém não consegui implementar a parte de de colocar o Z se
+Bom como falado na descrição eu pesquisei na internet e fiz todas as funções, porém não consegui implementar a parte de de colocar o Z se
 ja existisse o X.
 
 ## Como vocês dividiram/fizeram a atividade?
@@ -26,7 +26,7 @@ videos na internet.
 
 ## Quanto tempo você gastou no total na atividade?
 
-Eu levei cerca de 7 horas em somatorio, porém foram alguns dias pois eu tentava e dava uma pausa para depois tentar de novo. 
+Eu levei cerca de 18 horas em somatorio, porém foram cerca de uma semana pois eu tentava e dava uma pausa para depois tentar de novo. 
 
 ## Informações
 
