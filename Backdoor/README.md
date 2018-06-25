@@ -11,7 +11,6 @@ apagar as fotos e videos gerados pela prática.
 <ul>
 
    <li>Kali Linux (Atacante)</li>
-   <li>Metasploit</li>
 
 </ul>
 
