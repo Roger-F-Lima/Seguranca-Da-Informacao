@@ -23,33 +23,61 @@ Cerca de quatro horas, decidindo o que iramos falar e reunido tutorias.
 
 ## Tutorial de como selecinar o pais pelo qual seu tráfico vai passar.
 
-## TORRC
-A configuração é simples, modifique seu arquivo torrc para adicionar a seguinte linha para garantir que o Tor use apenas os nós de saída baseados na Brasil.
+# Prática Tor
 
-## ExitNodes
+## Instalando o Tor
 
-As duas linhas a seguir configuram o nosso Tor para que use o Brasil na hora de buasca um Relay. 
-Por favor, note que em todos esses exemplos, devemos habilitar StrictNodes.
+Baixando
+```
+curl -O -L https://www.torproject.org/dist/torbrowser//7.5.4/tor-browser-linux64-7.5.4_pt-BR.tar.xz
+```
+Descompactando
+```
+tar xvf tor-browser-linux64-7.5.4_pt-BR.tar.xz
+```
+Acessando o dirétorio gerado
+```
+cd tor-browser_pt-BR
+```
+Modificando alguns parametros para o funcionamento do Tor
+```
+sed -i 's/"`id -u`" -eq 0/"`id -u`" -eq x/' Browser/start-tor-browser
+```
+```
+sed -i 's/The Tor Browser Bundle should not be run as root.  Exiting.//' Browser/start-tor-browser
+```
+## Configurando uma lista negra
 
-ExitNodes {br}
-StrictNodes 1
+![imagem1](imagens/01.png)
 
-Este exemplo usará a Brasil, Uganda, Coreia do Sul ou Irlanda eleatório como saída:
+## Acessando um site que rastreia o IP
+Navegador que implementa o protocolo Tor (podemos observar a rota que a solicitação fez)
 
-ExitNodes {br},{ug},{kp},{ie}
+Abrindo o navegador Tor
+```
+./Browser/start-tor-browser 2> /dev/null &
+```
 
-## Lista Negra
+![imagem2](imagens/02.png)
 
-Você também pode usar isso como uma medida defensiva também. Se você acredita que existe algum tipo de ameaça geocêntrica em Estados
-Unidos, você pode configurar o Tor para nunca usar esses nós de saída.
+Navegador que não implementa 
 
-ExcludeExitNodes {us}
+![imagem3](imagens/03.png)
 
-Você também pode excluir todos os tipos de nós para um país específico - saídas, retransmissões, entrada e nós de ponte.
+## Acessando um site na Deep Web
+Criei um email na rede onion. Segue o site: `http://torbox3uiot6wchz.onion/`
 
-ExcludeNodes {us}
-Você tem a capacidade de colocar na lista de permissões todos os tipos de nós, o que significa que você pode garantir que todo o seu
-circuito Tor use apenas um determinado país. Isso não é recomendado, é claro. Um circuito ideal cruzará países e jurisdições legais.
+As imagens abaixo apresenta os passos: `Criar o email`, `confirmação do precedimento de criação`, `tela de acesso` e `acessando o email`, respectivamente.
+
+![imagem4](imagens/04.png)
+
+![imagem5](imagens/05.png)
+
+![imagem6](imagens/06.png)
+
+![imagem7](imagens/07.png)
+
+Tutorial por Jardel Goncalves.
 
 ## VPN e Tunelamento 
 Uma Rede Particular Virtual (Virtual Private Network – VPN), como o próprio nome sugere, é uma forma de conectar dois computadores
